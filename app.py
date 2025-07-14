@@ -13,7 +13,7 @@ def carrega_modelo():
     url = 'https://drive.google.com/uc?id=1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp'
 
     # baixa o arquivo
-    gdown.down(url, 'modelo_quantizado16bits.tflite') 
+    gdown.download(url, 'modelo_quantizado16bits.tflite') 
 
     interpreter = tf.lite.Interpreter(modelo_path='modelo_quantizado16bits.tflite')
 
@@ -44,7 +44,8 @@ def carrega_imagem():
         # adicionar uma dimensão extra
         image = np.expand_dims(image,  axis=0)
 
-    return image       
+        return image
+       
         
 
 def main():
