@@ -15,7 +15,7 @@ def carrega_modelo():
     # baixa o arquivo
     gdown.download(url, 'modelo_quantizado16bits.tflite') 
 
-    interpreter = tf.lite.Interpreter(modelo_path='modelo_quantizado16bits.tflite')
+    interpreter = tf.lite.Interpreter(model_path='modelo_quantizado16bits.tflite')
 
     # disponibiliza para uso
     interpreter.allocate_tenors()
