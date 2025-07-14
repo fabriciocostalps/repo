@@ -53,23 +53,13 @@ def main():
     )
     st.write("# Classifica folhas de videiras!")
 
-    # Carregar o modelo
+      # Carregar o modelo
     interpreter = carrega_modelo()
 
     # Carregar a imagem
     imagem = carrega_imagem()
-    
-    if imagem is not None:
-        # Aqui você precisará adicionar a lógica para classificar a imagem
-        # usando o interpretador do modelo
-        st.write("Imagem pronta para classificação!")
-        # Exemplo:
-        # input_details = interpreter.get_input_details()
-        # interpreter.set_tensor(input_details[0]['index'], imagem)
-        # interpreter.invoke()
-        # output_details = interpreter.get_output_details()
-        # output_data = interpreter.get_tensor(output_details[0]['index'])
-        # st.write(f"Resultado: {output_data}")
+    # Classificar a imagem
+
 
 if __name__ == "__main__":
     main()
