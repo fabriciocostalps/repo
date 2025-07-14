@@ -43,8 +43,9 @@ def carrega_imagem():
 
         # adicionar uma dimensão extra
         image = np.expand_dims(image,  axis=0)
+
+    return image       
         
-        return image
 
 def main():
 
