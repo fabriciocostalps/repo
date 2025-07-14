@@ -23,7 +23,7 @@ def carrega_modelo():
     return interpreter
 
 def carrega_imagem():
-    uploaded_file = st.file_uploader("Arraste e solte a uma imagem ou clique para selizionar uma , type=['png', 'jpg', 'jpeg'])
+    uploaded_file = st.file_uploader("Arraste e solte a uma imagem ou clique para selecionar uma", type=['png', 'jpg', 'jpeg'])
 
     if uploaded_file is not None:
         image_data = uploaded_file.read()
